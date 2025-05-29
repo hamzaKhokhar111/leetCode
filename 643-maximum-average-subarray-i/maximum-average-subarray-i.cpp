@@ -11,8 +11,9 @@ public:
         int maxSum = windowSum;
 
         // Slide the window
-        for (int i = k; i < nums.size(); ++i) {
-            windowSum += nums[i] - nums[i - k];
+        for (int i = 1; i <= nums.size()-k; ++i) {
+
+            windowSum = windowSum - nums[i-1] + nums[i+k-1];
             maxSum = max(maxSum, windowSum);
         }
 
