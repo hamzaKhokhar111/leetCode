@@ -1,18 +1,14 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_map<int,int> freq;
-        
-        for(int i=0; i<nums.size();i++){
-           freq[ nums[i]]++;
-        };
+        sort(nums.begin(), nums.end());  // Sort the array first
 
-        for( auto  pair : freq){
-            if(pair.second >=2){
-                return true ;
+        for (int i = 0; i < nums.size() - 1; i++) {  // Loop till second last
+            if (nums[i] == nums[i + 1]) {  // Check adjacent elements
+                return true;  // Duplicate found
             }
         }
-     return false;
-        
+
+        return false;  // No duplicates
     }
 };
