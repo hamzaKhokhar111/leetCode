@@ -1,21 +1,23 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int low = 0;
-        int high = nums.size() - 1;
+        int left = 0;                 // start index
+        int right = nums.size() - 1;  // end index
 
-        while (low <= high) {
-            int middle = (low + high) / 2;
+        while (left <= right) {
+            int mid = left + (right - left) / 2; // middle index
 
-            if (nums[middle] == target) {
-                return middle;
-            } else if (nums[middle] < target) {
-                low = middle + 1;
-            } else {
-                high = middle - 1;
+            if (nums[mid] == target) {
+                return mid; // target mil gaya
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1; // target right side me hai
+            }
+            else {
+                right = mid - 1; // target left side me hai
             }
         }
 
-        return -1; // Target not found
+        return -1; // target nahi mila
     }
 };
