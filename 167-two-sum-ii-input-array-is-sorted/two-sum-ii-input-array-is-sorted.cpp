@@ -1,19 +1,21 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-        int i=0;
-        int j=numbers.size()-1;
+        int left = 0, right = numbers.size() - 1;
 
-        while(i<j){
-            int sum=numbers[i]+ numbers[j];
-            if(sum==target){
-                return {i+1, j+1};
-            } else if(sum<target){
-                i++;
-            }else{
-                j--;
+        while (left < right) {
+            int sum = numbers[left] + numbers[right];
+
+            if (sum == target) {
+                return {left + 1, right + 1}; // 1-indexed answer
+            } 
+            else if (sum < target) {
+                left++; // sum chhota hai, left aage badhao
+            } 
+            else {
+                right--; // sum bada hai, right peeche lao
             }
         }
-     return {};
+        return {}; // kabhi yahan nahi aayega kyunki solution guaranteed hai
     }
 };
