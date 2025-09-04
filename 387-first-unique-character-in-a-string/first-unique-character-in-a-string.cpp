@@ -1,16 +1,20 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char,int> charmap;
+        unordered_map<char, int> freq;
 
-        for(int i=0; i<s.size(); i++){
-            charmap[s[i]]++;
+        // Step 1: count frequencies
+        for (char c : s) {
+            freq[c]++;
         }
-        for(int i=0; i<s.size(); i++){
-            if(charmap[s[i]]==1){
+
+        // Step 2: find first character with freq == 1
+        for (int i = 0; i < s.size(); i++) {
+            if (freq[s[i]] == 1) {
                 return i;
             }
-        };
+        }
+
         return -1;
     }
 };
