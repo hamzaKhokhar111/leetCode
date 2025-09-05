@@ -8,13 +8,13 @@ public:
             freq[c]++;
         }
 
-        // Step 2: find first character with freq == 1
+        // Step 2: iterate over string in original order
         for (int i = 0; i < s.size(); i++) {
             if (freq[s[i]] == 1) {
-                return i;
+                return i;  // return index of first unique char
             }
         }
 
-        return -1;
+        return -1;  // no unique character found
     }
 };
