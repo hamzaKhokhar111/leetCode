@@ -1,17 +1,19 @@
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        unordered_map<int, int> mymap; // number -> last index
-
+        unordered_map<int, int> mp; // number -> last index
         for (int i = 0; i < nums.size(); i++) {
-            if (mymap.find(nums[i]) != mymap.end()) {
-                // pehle bhi ye number aya tha
-                if (i - mymap[nums[i]] <= k) {
+            if (mp.find(nums[i]) != mp.end()) {
+                // check distance
+                if (i - mp[nums[i]] <= k) {
                     return true;
                 }
             }
-            // update last index of current number
-            mymap[nums[i]] = i;
+            mp[nums[i]] = i; // update last index
         }
         return false;
     }
