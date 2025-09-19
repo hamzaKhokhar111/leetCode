@@ -2,16 +2,13 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         if (nums.empty()) return 0;
-
-        int j = 0; // unique element ka pointer
-
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] != nums[j]) {
-                j++;
-                nums[j] = nums[i];
+        int i = 0;
+        for (int j = 1; j < nums.size(); j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
             }
         }
-
-        return j + 1; // unique elements ki count
+        return i + 1;
     }
 };
