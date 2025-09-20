@@ -1,20 +1,20 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> freq;
-
-        // Step 1: count frequencies
-        for (char c : s) {
-            freq[c]++;
+        // Step 1: frequency count array
+        vector<int> freq(26, 0);
+        
+        for(char c : s) {
+            freq[c - 'a']++;
         }
-
-        // Step 2: iterate over string in original order
-        for (int i = 0; i < s.size(); i++) {
-            if (freq[s[i]] == 1) {
-                return i;  // return index of first unique char
+        
+        // Step 2: find first unique
+        for(int i = 0; i < s.size(); i++) {
+            if(freq[s[i] - 'a'] == 1) {
+                return i;
             }
         }
-
-        return -1;  // no unique character found
+        
+        return -1;
     }
 };
