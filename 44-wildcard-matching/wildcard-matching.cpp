@@ -23,3 +23,5 @@ public:
 
 
 //hamza ho yarr
+
+//phr le hmza yrr tumhari to dunia ojrr gi hani hamza
