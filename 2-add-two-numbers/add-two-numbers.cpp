@@ -18,3 +18,6 @@ public:
         return dummy->next;
     }
 };
+
+
+//okokoko
