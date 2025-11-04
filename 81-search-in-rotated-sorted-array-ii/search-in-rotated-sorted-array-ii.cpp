@@ -31,3 +31,5 @@ public:
 };
 
 //oko
+//hmz
+//almama
