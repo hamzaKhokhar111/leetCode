@@ -40,4 +40,4 @@ public:
         return dummy->next;
     }
 };
-//okokok
+//ohamaza
