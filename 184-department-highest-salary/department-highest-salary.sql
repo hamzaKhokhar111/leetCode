@@ -7,3 +7,5 @@ WHERE (e.DepartmentId, e.Salary) IN (
     FROM Employee
     GROUP BY DepartmentId
 );
+
+-- //jmjmjm
