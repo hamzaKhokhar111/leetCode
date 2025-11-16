@@ -8,4 +8,4 @@ WHERE (e.DepartmentId, e.Salary) IN (
     GROUP BY DepartmentId
 );
 
--- //hamza
+-- //ham
