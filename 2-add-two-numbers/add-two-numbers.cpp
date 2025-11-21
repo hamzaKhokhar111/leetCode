@@ -36,3 +36,5 @@ public:
         return dummy->next;
     }
 };
+
+//my name is hamza ashrafff
