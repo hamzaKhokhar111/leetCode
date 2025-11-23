@@ -25,3 +25,7 @@ int carry = 0;
 }
 
 };
+
+
+
+//ad by hamza a shrfd 
