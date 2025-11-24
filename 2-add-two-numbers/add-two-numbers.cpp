@@ -25,4 +25,7 @@ int carry = 0;
 }
 
 };
-//ad by  Hamza Ashraf kho
+
+
+
+//ad by  Hamza Ashraf k
