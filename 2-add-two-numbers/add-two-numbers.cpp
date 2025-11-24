@@ -28,4 +28,4 @@ int carry = 0;
 
 
 
-//ad by hamza a shrfd 
+//ad by  Hamza Ashraf khokhar 
