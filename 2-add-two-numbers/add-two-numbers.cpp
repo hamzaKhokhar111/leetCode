@@ -28,4 +28,4 @@ int carry = 0;
 
 
 
-//ad by  Hamza Ashra
+//ad by  Hamza As
