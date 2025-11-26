@@ -7,18 +7,15 @@ public:
 
         while (left < right) {
             int width = right - left;
-            int minHeight = min(height[left], height[right]);
-            int area = width * minHeight;
-
+            int h = min(height[left], height[right]);
+            int area = width * h;
             maxWater = max(maxWater, area);
 
-            if (height[left] < height[right]) {
+            if (height[left] < height[right])
                 left++;
-            } else {
+            else
                 right--;
-            }
         }
-
         return maxWater;
     }
 };
